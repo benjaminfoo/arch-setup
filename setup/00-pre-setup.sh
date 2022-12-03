@@ -49,8 +49,8 @@ mount --mkdir /dev/sda1 /mnt/home/
 mount --mkdir /dev/sdb1 /mnt/data
 swapon /dev/nvme0n1p3
 
-## Install base-system to mounted drives
-pacstrap -i /mnt base arch-install-scripts nano
+## Install base-system (linux kernel, firmware, etc) to mounted drives
+pacstrap /mnt base base-devel linux linux-firmware dhcpcd nano arch-install-scripts
 
 ## generate /etc/fstab
 genfstab -U /mnt >> /mnt/etc/fstab
