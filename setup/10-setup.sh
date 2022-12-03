@@ -33,24 +33,8 @@ grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
 
 ## cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
 
+## Firmware and Microcode
+pacman -S "amd-ucode"
+
 ## Create a new GRUB config:
 grub-mkconfig -o /boot/grub/grub.cfg
-
-#
-
-## Networking
-pacman -S "networkmanager dhcpcd"
-
-### Enable NetworkManager
-systemctl enable NetworkManager.service
-
-## System Services
-pacman -S "acpid dbus avahi cups"
-
-## Enable previously installed services
-systemctl enable acpid
-systemctl enable avahi-daemon
-systemctl enable cups.service
-
-## Firmware and Microcode
-pacman -S "amd-ucode linux-firmware"
