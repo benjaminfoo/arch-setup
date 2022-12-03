@@ -1,6 +1,5 @@
 #
 # Arch-Setup
-#
 # This script setups up the system before entering arch-chroot
 #
 # TODO: 
@@ -14,12 +13,8 @@ loadkeys de-latin1
 timedatectl set-ntp true
 
 # Partition disks
-## Format
-...
-
-## Mount
-...
-
+# For everyone reading this far: this step is highly dependend of your own system,
+# so take a look at the arch-wiki for more information: https://wiki.archlinux.org/title/installation_guide#Partition_the_disks
 
 # Install base-system to mounted drives
 pacstrap -K /mnt base linux linux-firmware
@@ -32,5 +27,6 @@ arch-chroot /mnt
 
 # End of pre-setup phase reached!
 # Look into 10-setup.sh for further instructions
+
 
 
