@@ -1,6 +1,5 @@
 #
 # Arch-Setup
-#
 # This script should get called while entering arch-chroot for the first time
 #
 
@@ -22,8 +21,7 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 ### Setup the console keyboard layout
 echo "KEYMAP=de-latin1" > /etc/vconsole.conf
 
-## System Software
-pacman -S "amd-ucode linux-firmware"
+# System Software
 
 ## Networking
 pacman -S "networkmanager dhcpcd"
@@ -31,18 +29,17 @@ pacman -S "networkmanager dhcpcd"
 ### Enable NetworkManager
 systemctl enable NetworkManager.service
 
-## Tools / Optionals
-pacman -S "man-db man-pages"
-pacman -S "ntfs-3g usbutils unrar unzip p7zip"
+## System Services
+pacman -S "acpid dbus avahi cups"
 
-## Android
-pacman -S "gvfs-mtp libmtp android-udev mtpfs"
+## Enable previously installed services
+systemctl enable acpid
+systemctl enable avahi-daemon
+systemctl enable cups.service
 
-## Pre-Desktop Environment
-pacman -S "nvidia"
 
-## Desktop Environment
-pacman -S "xorg-server xorg-apps xorg-xkill gdm gnome"
+## Boot Manager
+pacman -S "grub efibootmgr dosfstools os-propber mtools linux linux-headers"
 
-## Enable gdm
-systemctl enable gdm.service
+## Firmware and Microcode
+pacman -S "amd-ucode linux-firmware"
