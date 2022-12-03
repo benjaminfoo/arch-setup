@@ -33,8 +33,13 @@ grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
 
 ## cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
 
-## Firmware and Microcode
-pacman -S "amd-ucode"
+## Install amd-Microcode and ntfs-3g for mounting the data-partition after rebooting
+pacman -S "amd-ucode ntfs-3g"
 
 ## Create a new GRUB config:
 grub-mkconfig -o /boot/grub/grub.cfg
+
+# Leaving the live system
+exit
+umount -a
+reboot
