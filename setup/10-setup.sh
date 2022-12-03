@@ -39,6 +39,9 @@ pacman -S "amd-ucode ntfs-3g"
 ## Create a new GRUB config:
 grub-mkconfig -o /boot/grub/grub.cfg
 
+## Setup the root-password - this is important to be able to login after the reboot :)
+passwd
+
 # Leaving the live system
 exit
 umount -a
