@@ -50,7 +50,7 @@ mount --mkdir /dev/sdb1 /mnt/data
 swapon /dev/nvme0n1p3
 
 ## Install base-system to mounted drives
-pacstrap -i -K /mnt base
+pacstrap -i -K /mnt base arch-install-scripts nano
 
 ## generate /etc/fstab
 genfstab -U -p /mnt >> /mnt/etc/fstab
