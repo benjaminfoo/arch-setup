@@ -1,9 +1,7 @@
 # Arch-Setup
+This repository contains a collection of scripts in order to install a minimal, non-optional, uefi-supported arch setup on my workstation.  
 
-This repository contains a collection of scripts in order to install arch on my workstation.  
 The setup is seperated into multiple steps: Pre-Setup -> Setup -> Post-Setup
-
-This setup utilizes UEFI boot mode.
 
 ## Pre-Setup
 This phase sets up the system while using the live system from the installation medium.
