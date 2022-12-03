@@ -40,20 +40,20 @@ ls /sys/firmware/efi/efivars
 ## First one is EFI, second one is /, third one is swap
 mkfs.fat -F32 /dev/nvme0n1p1
 mkfs.ext4 /dev/nvme0n1p2
-mkswap /dev/nvme0n1p2    
+mkswap /dev/nvme0n1p3    
 mkfs.ext4 /dev/sda1
 
 ## mount partitions
 mount /dev/nvme0n1p2 /mnt/
 mount --mkdir /dev/sda1 /mnt/home/
-mount --mkdir /dev/sdb1 /mnt/data
+mount --mkdir /dev/sdb1 /mnt/mnt/data
 swapon /dev/nvme0n1p3
-
-## Install base-system (linux kernel, firmware, etc) to mounted drives
-pacstrap /mnt base base-devel linux linux-firmware dhcpcd nano arch-install-scripts
 
 ## generate /etc/fstab
 genfstab -U /mnt >> /mnt/etc/fstab
+
+## Install base-system (linux kernel, firmware, etc) to mounted drives
+pacstrap /mnt base base-devel linux linux-firmware dhcpcd nano arch-install-scripts ntfs-3g
 
 # Chroot into the system
 arch-chroot /mnt
