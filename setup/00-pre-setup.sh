@@ -50,10 +50,10 @@ mount --mkdir /dev/sdb1 /mnt/data
 swapon /dev/nvme0n1p3
 
 ## Install base-system to mounted drives
-pacstrap -i -K /mnt base arch-install-scripts nano
+pacstrap -i /mnt base arch-install-scripts nano
 
 ## generate /etc/fstab
-genfstab -U -p /mnt >> /mnt/etc/fstab
+genfstab -U /mnt >> /mnt/etc/fstab
 
 # Chroot into the system
 arch-chroot /mnt
