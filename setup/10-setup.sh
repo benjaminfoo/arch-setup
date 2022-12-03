@@ -23,7 +23,7 @@ echo "KEYMAP=de-latin1" > /etc/vconsole.conf
 
 # Boot Manager
 ## Boot Manager & Tools
-pacman -S "grub efibootmgr dosfstools os-propber mtools"
+pacman -S "grub efibootmgr dosfstools os-proper mtools"
 
 ## Setup EFI-directory
 mount --mkdir /dev/nvme0n1p2 /boot/efi
