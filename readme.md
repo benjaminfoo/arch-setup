@@ -15,7 +15,7 @@ This phase sets up the system after entering the (arch-)chroot environment.
 This phase sets up the system from within the installed arch system on the workstation.
 
 ## Requirements
-- A bootable installation media with the latest arch iso installed, see: https://wiki.archlinux.org/title/USB_flash_installation_medium#Using_GNOME_Disk_Utility
+- A bootable installation media with the latest arch iso installed, see: https://wiki.archlinux.org/title/USB_flash_installation_medium
 - A working ethernet connection on the target client
 
 ## Further information
