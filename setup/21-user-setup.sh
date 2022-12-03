@@ -17,8 +17,8 @@ pacman -S man-db man-pages
 
 ## Tools / Optionals
 pacman -S mc unrar unzip unarj p7zip cabextract
-pacman -S zsh git nano lynx htop
-pacman -S xfce4-terminal menulibre gparted
+pacman -S git nano lynx htop
+pacman -S xfce4-terminal gparted
 
 ## Web
 pacman -S firefox thunderbird
@@ -48,6 +48,7 @@ cd yay
 makepkg -si
 
 # Install software from aur
+yay -S menulibre
 yay -S gnome-shell-extension-blur-my-shell
 
 # Spotify, borked at the moment (manually copy the sh512 checksum from mirror into pkgbuild)
@@ -56,3 +57,8 @@ yay -S gnome-shell-extension-blur-my-shell
 # Post-Post-Setups
 # Retrieve https://github.com/fthx/dashbar and install via extension-manager
 # Use pacman -S gnome-browser-connector to install extensions from the store"
+
+# Install and configure zsh
+pacman -S zsh 
+chsh -l
+chsh /usr/bin/zsh
