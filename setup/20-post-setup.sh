@@ -21,6 +21,10 @@ systemctl enable acpid
 systemctl enable avahi-daemon
 systemctl enable cups
 
+## Enable already available services
+systemctl enable --now fstrim.timer
+systemctl enable --now systemd-timesyncd.service
+
 # Desktop Environment
 
 ## Install nvidia driver
