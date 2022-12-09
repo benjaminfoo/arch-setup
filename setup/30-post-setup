@@ -1,0 +1,12 @@
+#
+# Arch-Setup
+# This file contains notes about different topics
+#
+
+## Using other EFI-based OS in combination
+- Install $os on a seperate drive
+- Reboot to arch
+- Uncomment the line in /etc/default/grub => GRUB_DISABLE_OS_PROBER=false
+- Rerun grub-mkconfig in combination with os_prober to detect grub-mkconfig -o /boot/grub/grub.cfg
+- Grub Boot Menu contains entry for booting $os
+- EFI = awesome
