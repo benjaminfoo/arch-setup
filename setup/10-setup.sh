@@ -11,8 +11,9 @@ ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 ## Set the System Clock from the Hardware Clock
 hwclock --systohc
 
-## Edit /etc/locale.gen and uncomment en_US.UTF-8 UTF-8, and execute
+## Edit /etc/locale.gen and uncomment "en_US.UTF-8 UTF-8", "de_DE.UTF-8 UTF-8" and execute locale-gen.
 echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
+echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 
 ## Setup the system-lang
