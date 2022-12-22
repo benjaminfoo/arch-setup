@@ -1,0 +1,12 @@
+# Learned lessons while installing / using arch
+
+## Hints, Problems & Solutions
+
+### GPU
+- Flickering
+- Bugs while taking screenshots
+- Bugs while sharing the screen
+=> Solution: The package "xf86-video-intel" is bugged 
+
+### Locales
+In order to use mixed locales, it's required to generate multiple locales within the file /etc/locale.gen => uncomment all required locales and run locale-gen afterwards.
