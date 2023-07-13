@@ -3,7 +3,7 @@
 #
 
 # fully upgrade the system
-pacman -Syu
+sudo pacman -Syu
 
 # generate bootloader config
 sudo grub-mkconfig -o /boot/grub/grub.cfg
