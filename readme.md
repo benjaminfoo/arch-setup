@@ -13,13 +13,18 @@ The installation consists of a bare minimum configurationwhich includes:
 - handpicked kde desktop
 - etc.
 
-## Pre-Setup
+# Installation
+The two following steps are needed to install arch: 
 
-This phase sets up the system while using the live system from the installation medium.
+## (1/2) Pre Chroot
+This phase sets up the system while using the live system from the installation medium. 
+You simply need to get and execute the 00-pre-setup.sh script.
 
-## Setup
-
+## (2/2) In Chroot
 This phase sets up the system after entering the (arch-)chroot environment.
+You simply need to get and execute the 10-setup.sh script.
+
+Reboot - you should get greeted by sddm!
 
 ## Further information
 
